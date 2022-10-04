@@ -2,7 +2,7 @@ import useFetch from './hooks/useFetch'
 import React from "react";
 import {Link} from 'react-router-dom'
 import {Row, Col, Image} from 'react-bootstrap'
-import RecNode from './hooks/recNode';
+import RecNode from './recNode';
 
 
 function App() {
@@ -16,10 +16,10 @@ function App() {
       <Row>
         {data &&
           data.data.map((d) => (
-            <Col key={d._id}>
+            <Col md={3} key={d._id}>
               <RecNode obj={d} />
             </Col>
-          ))}{" "}
+          ))}
       </Row>
     </div>
   );
